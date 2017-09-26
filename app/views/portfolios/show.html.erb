@@ -1,0 +1,7 @@
+<%= image_tag @portfolio_item.thumb_image %>
+<h1><%= @portfolio_item.title %></h1>
+<%#= @portfolio_item.inspect %>
+<em><%= @portfolio_item.title %></em>
+<p><%= @portfolio_item.body %></p>
+<br>
+<%= link_to "BACK", portfolios_path %> | <%= link_to "EDIT", edit_portfolio_path(@portfolio_item[:id]) %>
