@@ -3,6 +3,8 @@ class PortfoliosController < ApplicationController
 
   def index
     @portfolios_items = Portfolio.all
+    # @portfolios_items = Portfolio.ruby_on_rails #pulling angular from the model portfolio file
+    # @portfolios_items = Portfolio.angular #pulling angular from the model portfolio file
   end
 
   def new
