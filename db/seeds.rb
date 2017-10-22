@@ -48,7 +48,7 @@ puts "9 portfolio items created"
   subtitle: "Angular",
   body: "Jianbing pickled chillwave microdosing enamel pin dreamcatcher
   mustache la croix humblebrag man braid viral.",
-  main_image: "http://via.placeholder.com/350x200http://via.placeholder.com/600x400",
+  main_image: "http://via.placeholder.com/350x200",
   thumb_image: "http://via.placeholder.com/600x400",
   )
 end
