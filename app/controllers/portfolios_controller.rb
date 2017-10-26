@@ -2,7 +2,7 @@ class PortfoliosController < ApplicationController
   before_action :portfolio_find, only: [:edit, :update, :show, :destroy]
 
   def index
-    @portfolios_items = Portfolio.all
+    @portfolios_items = Portfolio.all.order("created_at DESC")
     # @portfolios_items = Portfolio.ruby_on_rails #pulling angular from the model portfolio file
     # @portfolios_items = Portfolio.angular #pulling angular from the model portfolio file
   end
