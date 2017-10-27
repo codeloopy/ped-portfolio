@@ -3,6 +3,10 @@
 <%#= @portfolio_item.inspect %>
 <em><%= @portfolio_item.title %></em>
 <p><%= @portfolio_item.body %></p>
+<h2>Technologies used</h2>
+<% @portfolio_item.technologies.each do |t| %>
+  <p><%= t.name%></p>
+<% end %>
 <br>
 <%= link_to "BACK", portfolios_path %> | <%= link_to "EDIT", edit_portfolio_path(@portfolio_item[:id]) %> |
 <%= link_to "DELETE", portfolio_path(@portfolio_item), method: :delete, data: { confirm: "Are you sure mofo?"} %>
