@@ -1,5 +1,6 @@
 class PortfoliosController < ApplicationController
   before_action :portfolio_find, only: [:edit, :update, :show, :destroy]
+  layout "portfolio"
 
   def index
     @portfolios_items = Portfolio.all.order("created_at DESC")
