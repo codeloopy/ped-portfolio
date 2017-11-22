@@ -1,0 +1,5 @@
+<h2><%= link_to portfolio_item.title, portfolio_path(portfolio_item) %></h2>
+<%= image_tag portfolio_item.main_image unless portfolio_item.main_image.nil? %>
+<h3><%= portfolio_item.subtitle %></h3>
+<%= link_to "EDIT Portfolio Item", edit_portfolio_path(portfolio_item) %>
+<hr>

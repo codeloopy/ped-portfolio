@@ -3,7 +3,7 @@ class PortfoliosController < ApplicationController
   layout "portfolio"
 
   def index
-    @portfolios_items = Portfolio.all.order("created_at DESC")
+    @portfolio_items = Portfolio.all.order("created_at DESC")
     # @portfolios_items = Portfolio.ruby_on_rails #pulling angular from the model portfolio file
     # @portfolios_items = Portfolio.angular #pulling angular from the model portfolio file
   end
