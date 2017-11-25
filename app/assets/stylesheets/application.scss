@@ -1,5 +1,2 @@
-.top a {
-  color: red;
-  text-decoration: none;
-  text-transform: uppercase;
-}
+// Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap";
