@@ -10,7 +10,7 @@ module CurrentUserConcern
     guest.name = "Guest User"
     guest.first_name = "Guest"
     guest.last_name = "User"
-    guest.email = "User@email.com"
+    guest.email = "user@email.com"
 
     guest #this is to return the entire guest object
   end
