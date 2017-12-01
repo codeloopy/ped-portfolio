@@ -13,17 +13,17 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-
-    <%= render 'layouts/navbar', location: 'top' %> <!-- location is the variable and top is the argument being passed into the partial -->
-
-    <%= login_logic_helper %>
-
-    <%= yield %>
-    <br>
-    <%= @copyright %>
-
-    <%= source_helper("application")%>
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+          <%= render 'shared/application_navbar', location: 'top' %> <!-- location is the variable and top is the argument being passed into the partial -->
+          <%= login_logic_helper %>
+          <%= yield %>
+          <br>
+          <%= @copyright %>
+          <%= source_helper("application")%>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
