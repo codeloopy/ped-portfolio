@@ -17,11 +17,11 @@
       <div class="site-wrapper-inner">
         <div class="cover-container">
           <%= render 'shared/application_navbar', location: 'top' %> <!-- location is the variable and top is the argument being passed into the partial -->
-          <%= login_logic_helper %>
+
           <%= yield %>
           <br>
-          <%= @copyright %>
           <%= source_helper("application")%>
+          <%= render 'shared/footer' %>
         </div>
       </div>
     </div>
