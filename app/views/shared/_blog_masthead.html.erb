@@ -1,0 +1,6 @@
+<div class="blog-header">
+  <div class="container">
+    <h1 class="blog-title">The Blog</h1>
+    <%= link_to 'Write a new blog', new_blog_path, class: 'btn btn-primary' if logged_in?(:site_admin)%>
+  </div>
+</div>
