@@ -1,5 +1,7 @@
-<h2><%= link_to portfolio_item.title, portfolio_path(portfolio_item) %></h2>
-<%= image_tag portfolio_item.main_image unless portfolio_item.main_image.nil? %>
-<h3><%= portfolio_item.subtitle %></h3>
-<%= link_to "EDIT Portfolio Item", edit_portfolio_path(portfolio_item) if logged_in?(:site_admin) %>
-<hr>
+<div class="card">
+  <%= image_tag portfolio_item.main_image unless portfolio_item.main_image.nil? %>
+  <h2 class="card-text">
+    <span><%= link_to portfolio_item.title, portfolio_path(portfolio_item) %></span>
+  </h2>
+  <h3><span><%= portfolio_item.subtitle %></h3></span>
+</div>
