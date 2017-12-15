@@ -4,9 +4,8 @@ class PortfoliosController < ApplicationController
   access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
 
   def index
-    @portfolio_items = Portfolio.all.order("created_at DESC")
-    # @portfolios_items = Portfolio.ruby_on_rails #pulling angular from the model portfolio file
-    # @portfolios_items = Portfolio.angular #pulling angular from the model portfolio file
+    @portfolio_items = Portfolio.all.by_position
+
   end
 
   def new
