@@ -5,7 +5,14 @@ class PortfoliosController < ApplicationController
 
   def index
     @portfolio_items = Portfolio.all.by_position
+  end
 
+  def sort
+    params[:order].each do |k,v|
+      Portfolio.find(v[:id]).update(position: v[:position])
+    end
+
+    render nothing: true
   end
 
   def new
