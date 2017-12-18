@@ -17,7 +17,16 @@
       <div class="site-wrapper-inner">
         <div class="cover-container">
           <%= render 'shared/application_navbar', location: 'top' %> <!-- location is the variable and top is the argument being passed into the partial -->
-          <div id='background'></div>
+          <!-- <div id='background'></div> -->
+          <%= video_tag(
+              'HardDrivePhotojpeg.mp4',
+              id: 'background',
+              autoplay: true,
+              loop: true,
+              mute: true,
+              poster: 'home_bg.png')
+
+          %>
           <%= yield %>
           <br>
           <%= source_helper("application")%>
