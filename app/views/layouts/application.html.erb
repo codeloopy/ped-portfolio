@@ -29,8 +29,9 @@
           %>
           <%= yield %>
           <br>
-          <%= source_helper("application")%>
           <%= render 'shared/footer' %>
+          <%= render 'shared/alerts' %>
+          <%= source_helper("application")%>
         </div>
       </div>
     </div>
