@@ -38,6 +38,10 @@ module ApplicationHelper
       {
         url: portfolios_path,
         title: 'Portfolio'
+      },
+      {
+        url: tech_news_path,
+        title: 'TechTweets'
       }
     ]
   end
@@ -58,7 +62,7 @@ module ApplicationHelper
 
   def alerts
     alert = (flash[:alert] || flash[:error] || flash[:notice])
-    
+
     alert_generator(alert) if alert
   end
 

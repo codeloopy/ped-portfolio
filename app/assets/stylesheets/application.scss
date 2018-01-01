@@ -223,3 +223,15 @@ body {
 .masthead-brand a {
   text-decoration: none;
 }
+
+.tech-news {
+  color: #000;
+  margin: 20px;
+  a {
+    color: red;
+  }
+}
+
+.tech-news > .card {
+  padding: 30px;
+}
