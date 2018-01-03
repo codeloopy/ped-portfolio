@@ -16,6 +16,8 @@ class User < ApplicationRecord
   #this validates that name will be entered so that the virtual attribute method will work and not throw an error if the user leaves blank
   validates_presence_of :name
 
+  has_many :comments, dependent: :destroy
+
   #Virtual Attributes
   def first_name
     self.name.split.first

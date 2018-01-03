@@ -3,6 +3,8 @@ class Blog < ApplicationRecord
 
   belongs_to :topi
 
+  has_many :comments, dependent: :destroy
+
   extend FriendlyId
   friendly_id :title, use: :slugged
 
