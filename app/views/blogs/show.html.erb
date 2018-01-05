@@ -4,4 +4,20 @@
   <%= link_to 'Edit Post', edit_blog_path(@blog) if logged_in?(:site_admin) %>
   <p><%= @blog.body %></p>
   <%= link_to 'Back', blogs_path %>
+
+  <!-- start of comment form -->
+  <% unless current_user.is_a? GuestUser %>
+    <%= form_for @comment, url: '#' do |f| %>
+      <div class="form-group">
+        <%= f.label :content %>
+        <%= f.text_area :content, class: 'form-control' %>
+      </div>
+      <%= f.submit "Submit Comment", class: 'btn btn-default' %>
+    <% end %>
+  <% end %>
+  <!-- end of comment form -->
+
+  <!-- start of comment -->
+
+  <!-- end of comment -->
 </div>
